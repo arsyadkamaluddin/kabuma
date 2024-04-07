@@ -1,127 +1,98 @@
-* {
-    margin: 0;
+*{
     padding: 0;
+    margin: 0;
     font-family: sans-serif;
     box-sizing: border-box;
-}
-
-.banner {
-    width: 100%;
-    height: 150vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)), url(img/bg.jpg);
-    background-size: cover;
-    background-position: center;
-    padding-top: 100px;
-}
-.quot{
-    margin: auto;
-    position: fixed;
-    left: 10vw;
-    bottom: 0;
-    z-index: 10;
-}
-.quot p{
-    background-color: white;
-    padding: 50px;
-    padding-bottom: 20px;
-    border-radius: 10px 10px 0px 0px;
-    text-align: center;
-    font-size: 15px;
-    width: 80vw;
-
-}
-.content {
-    width: 100%;
-    position: absolute;
-    top: 100%;
-    transform: translateY(-75%);
-    text-align: center;
-    /* color: white; */
-}
-
-.box-1 {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 80px;
-    align-items: center;
-}
-
-.box-1 .nama {
-    position: relative;
-    display: inline-block;
-}
-
-.box-1 .nama p {
-    width: 100px;
-    padding: 10px 0;
-    text-align: center;
-    font-weight: bold;
-    border: 2px solid #000968;
-    background: transparent;
-    color: white;
-    cursor: pointer;
-    border-radius: 25px;
-    overflow: hidden;
     font-size: 16px;
-    margin-bottom: 10px;
-    transition: top 0.3s ease; /* Tambahkan transisi untuk efek animasi */
 }
-
-.box-1 .nama img {
+body{
+    overflow-x: hidden;
+    background-image: url(./img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 400px;
+}
+.nama{
+    display: inline-block;
+    position: relative;
+}
+.box{
+    margin-top: 80px;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+}
+.nama p{
+    border: 3px solid #000968;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 20px;
+    padding: 10px;
     width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    position: absolute;
-    top: 100%; /* Mulai dari posisi bawah */
-    left: 50%;
-    transform: translateX(-50%);
+    height: 40px;
+    line-height: 15px;
+}
+.nama img{
     display: none;
+    position: absolute;
+    top: -30px;
+    width: 100px;
+    border-radius: 50px;
+}
+.nama:hover img{
+    display: block;
+}
+.nama blockquote{
+    display: none;
+}
+.quotes{
+    position: fixed;
+    bottom: 0;
+    left: 10vw;
+    text-align: center;
+    margin: auto;
+    width: 80vw;
+    background-color: white;
+    border-radius: 30px 30px 0 0;
+    z-index: 10;
+    padding: 10px;
+    padding-bottom: 20px;
+}
+.quotes img{
+    width: 60px;
+    border-radius: 30px;
+}
+.quotes p{
+    margin-top: -40px;
+    font-size: 15px;
 }
 .feb{
     position: relative;
-    bottom: -50px;
-    margin: auto;
-    background-color: white;
-    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    top: -45px;
     border-radius: 50%;
-    width: 50vw;
-    height: 80px;
-    text-align: center;
-}
-.feb img{
-    border-radius: 50%;
-    width: 60px;
-}
-.box-1 .nama:hover img {
-    display: block;
-    top: -30px; /* Atur posisi gambar ketika dihover */
-}
-
-.box-1 .nama:hover p {
-     /* top: 130%; Atur posisi nama ketika dihover */
-     visibility: hidden;
-}
-
-.box-1 .nama blockquote {
-    display: none; /* Sembunyikan kutipan secara default */
-    position: absolute;
-    top: 80px; /*Geser ke atas*/
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 12px;
-    font-style: italic;
-    width: 180px;
+    width: 30vw;
+    left: 25vw;
+    padding: 15px;
 }
 
 @media screen and (max-width: 800px) {
-    .quot p{
+    .quotes{
         font-size: 10px;
         padding: 10px;
-        padding-top: 50px;
+        padding-top: 0px;
         width: 90vw;
-    }
-    .quot{
         left: 5vw;
-
+    }
+    .quotes p{
+        font-size: 10px;
+    }
+    .feb{
+        background-color: rgb(255, 255, 255);
+        top: -50px;
+        width: 60vw;
+        left: 13vw;
     }
   }
