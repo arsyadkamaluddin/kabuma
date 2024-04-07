@@ -14,19 +14,22 @@
     padding-top: 100px;
 }
 .quot{
-    background-color: white;
-    width: 80vw;
     margin: auto;
     position: fixed;
     left: 10vw;
     bottom: 0;
     z-index: 10;
-    padding: 20px;
+}
+.quot p{
+    background-color: white;
+    padding: 50px;
+    padding-bottom: 20px;
     border-radius: 10px 10px 0px 0px;
     text-align: center;
     font-size: 15px;
-}
+    width: 80vw;
 
+}
 .content {
     width: 100%;
     position: absolute;
@@ -74,7 +77,21 @@
     transform: translateX(-50%);
     display: none;
 }
-
+.feb{
+    position: relative;
+    bottom: -50px;
+    margin: auto;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    width: 50vw;
+    height: 80px;
+    text-align: center;
+}
+.feb img{
+    border-radius: 50%;
+    width: 60px;
+}
 .box-1 .nama:hover img {
     display: block;
     top: -30px; /* Atur posisi gambar ketika dihover */
@@ -97,9 +114,10 @@
 }
 
 @media screen and (max-width: 800px) {
-    .quot{
+    .quot p{
         font-size: 10px;
         padding: 10px;
+        padding-top: 50px;
         width: 90vw;
         left: 5vw;
     }
